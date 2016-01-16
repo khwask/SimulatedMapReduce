@@ -18,7 +18,7 @@ public class Excercise5Main {
 	public static void main(String[] args) throws FileNotFoundException, InstantiationException, IllegalAccessException,
 			UnsupportedEncodingException, URISyntaxException {
 
-		// TODO: 課題5： 科目名と点数のペアが記載されている score.csv を対象として、各科目の標準偏差を計算してください。
+		// 課題5： 科目名と点数のペアが記載されている score.csv を対象として、各科目の標準偏差を計算してください。
 		// また、jp.ac.nii.exercise5.Exercise5Test のテストが通ることを確認して下さい。
 
 		// 参考資料: Googleで「Hadoop 分散キャッシュ」などのキーワードで検索すると理解が深まります。（課題には不要だと思いますが。）

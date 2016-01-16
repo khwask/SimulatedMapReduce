@@ -16,7 +16,7 @@ public class Excercise6Main {
 	public static void main(String[] args) throws FileNotFoundException, InstantiationException, IllegalAccessException,
 			UnsupportedEncodingException, URISyntaxException {
 
-		// TODO: 課題6： 商品名一覧（goods_list.csv）と同時に購入された商品ペアデータ（goods_pair.csv）を対象として、
+		// 課題6： 商品名一覧（goods_list.csv）と同時に購入された商品ペアデータ（goods_pair.csv）を対象として、
 		// 商品Xに対する商品Yの関連度を計算してください。
 		// 関連度 = 商品Xと商品Yのペアの総数 / 商品Xを含むペアの総数
 		// また、jp.ac.nii.exercise6.Exercise6Test のテストが通ることを確認して下さい。

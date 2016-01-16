@@ -4,11 +4,18 @@ import jp.ac.nii.mapreduceframework.Context;
 import jp.ac.nii.mapreduceframework.Reducer;
 
 /**
- * TODO: このファイルは未完成です！
+ * このファイルは完成です！
  */
 public class AverageCalculationReducer extends Reducer<String, Integer, String, Double> {
 	@Override
 	protected void reduce(String key, Iterable<Integer> values, Context context) {
-		// TODO: 平均値を計算しよう
+		// 平均値を計算しよう
+		double sum = 0;
+		int count = 0;
+		for (Integer value : values) {
+			sum += value;
+			count++;
+		}
+		context.write(key, sum / count);
 	}
 }

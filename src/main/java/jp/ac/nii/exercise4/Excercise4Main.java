@@ -19,7 +19,7 @@ public class Excercise4Main {
 	public static void main(String[] args)
 			throws FileNotFoundException, InstantiationException, IllegalAccessException, UnsupportedEncodingException {
 
-		// TODO: 課題4： 科目名と点数のペアが記載されている score.csv を対象として、各科目の標準偏差を計算してください。
+		// 課題4： 科目名と点数のペアが記載されている score.csv を対象として、各科目の標準偏差を計算してください。
 		// また、jp.ac.nii.exercise4.Exercise4Test のテストが通ることを確認して下さい。
 
 		// 参考資料: Googleで「Hadoop 標準偏差」などのキーワードで検索すると良いでしょう。

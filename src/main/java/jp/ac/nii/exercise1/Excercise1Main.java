@@ -16,7 +16,7 @@ public class Excercise1Main {
 	public static void main(String[] args)
 			throws FileNotFoundException, InstantiationException, IllegalAccessException, UnsupportedEncodingException {
 
-		// TODO: 課題1: このファイルを実行してexercise1/outputディレクトリと、exercise1.tsvファイルが生成されることを確認してください。
+		// 課題1: このファイルを実行してexercise1/outputディレクトリと、exercise1.tsvファイルが生成されることを確認してください。
 		// また、jp.ac.nii.exercise1.Exercise1Test のテストを実行して、テストが通ることを確認して下さい。
 		
 		Job<Long, String, String, Integer, String, Integer> job = Job.getInstance();

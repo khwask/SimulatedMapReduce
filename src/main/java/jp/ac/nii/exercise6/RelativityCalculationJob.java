@@ -12,7 +12,7 @@ import jp.ac.nii.mapreduceframework.NullWritable;
 /**
  * 以下の式の関連度を計算するジョブのJobです。
  *  関連度 = 商品Xと商品Yのペアの総数 / 商品Xを含むペアの総数
- *  TODO: このファイルは未完成です！
+ *  このファイルは完成です！
  */
 public class RelativityCalculationJob {
 
@@ -31,7 +31,7 @@ public class RelativityCalculationJob {
 		FileInputFormat.addInputPath(job, Paths.get(FileNameConstants.NUMERATOR));
 		FileOutputFormat.setOutputPath(job, Paths.get(FileNameConstants.RELATED_GOODS));
 
-		// TODO: ずっと下にある RelativityCalculationSortComparator, RelativityCalculationPartitioner, 
+		// ずっと下にある RelativityCalculationSortComparator, RelativityCalculationPartitioner, 
 		// RelativityCalculationGroupComparator クラスを修正しよう！
 		
 		// ヒント: RelativityCaclulationMapperクラスをよく読もう
@@ -64,8 +64,7 @@ public class RelativityCalculationJob {
 	public static class RelativityCalculationPartitioner extends HashPartitioner<String, String> {
 		@Override
 		public int getPartition(String key, String value, int numReduceTasks) {
-			// TODO: removeSharp()とsuper.getPartition()メソッドを活用しよう
-			return 0;	// 注意: return 0; は誤りです
+			return super.getPartition(removeSharpD(key), value, numReduceTasks);
 		}
 	}
 
@@ -77,8 +76,7 @@ public class RelativityCalculationJob {
 	public static class RelativityCalculationGroupComparator implements Comparator<String> {
 		@Override
 		public int compare(String a, String b) {
-			// TODO: removeSharp()とString.compareTo()メソッドを活用しよう
-			return 0;	// 注意: return 0; は誤りです
+			return removeSharpD(a).compareTo(removeSharpD(b));
 		}
 	}
 
@@ -91,8 +89,7 @@ public class RelativityCalculationJob {
 	public static class RelativityCalculationSortComparator implements Comparator<String> {
 		@Override
 		public int compare(String a, String b) {
-			// TODO: String.compareTo()メソッドを活用しよう
-			return 0;	// 注意: return 0; は誤りです
+			return b.compareTo(a);
 		}
 	}
 }
